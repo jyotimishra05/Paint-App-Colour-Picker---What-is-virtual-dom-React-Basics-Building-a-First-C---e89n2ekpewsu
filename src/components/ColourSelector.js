@@ -1,12 +1,11 @@
 import React from 'react';
 
 const ColourSelector = (props) => {
+  console.log(props);
   const { config, selectNextBackground } = props
-  const { background } = config;
+  const {label, classname, background } = config;
   return (
-    <button className={props.config.classname} onClick={() => selectNextBackground({background: background})}>
-      {props.config.label}
-    </button>
+    <button className={classname} onClick={() => selectNextBackground({background: background})}>{label}</button>
   )
 }
 export default ColourSelector;
